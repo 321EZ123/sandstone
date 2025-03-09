@@ -4,16 +4,13 @@ FROM node:14
 # Set the working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
-
-# Install dependencies
-RUN npm install
-
-# Copy the rest of the application code
+# Copy the entire application code
 COPY . .
 
-# Build the application
+# Install dependencies directly (if specified elsewhere in the code)
+RUN npm install
+
+# Build the application (ensure this command is valid)
 RUN npm run build:prod
 
 # Expose the application port
