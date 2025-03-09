@@ -13,7 +13,8 @@
     "build": "npx webpack",
     "build:prod": "npx webpack --mode=production",
     "dev": "npx webpack --watch",
-    "dev:all": "concurrently 'npm run dev' 'cd example; npm run dev'"
+    "dev:all": "concurrently 'npm run dev' 'cd example; npm run dev'",
+    "start": "node dist/sandstone.mjs"  // Add this line
   },
   "dependencies": {
     "astray": "^1.1.1",
